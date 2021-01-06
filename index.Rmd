@@ -1,0 +1,23 @@
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# **INTERACTIVE MAP USING LEAFLET**
+
+*Date:Jan-06-2021*
+
+```{r}
+library(leaflet)
+
+icon <- makeIcon(iconUrl = "https://www.ingenieria.unam.mx/nuestra_facultad/images/institucionales/escudo_fi_color.png",
+iconWidth=31*215/230,
+iconHeight=35.4,
+iconAnchorX=31*215/230/2,
+iconAnchorY=42.5
+)
+myMap <- leaflet() %>% addTiles() %>%
+  addMarkers(lat=19.330737510812508, lng= -99.18447866227642,icon=icon, popup="<a href='https://www.ingenieria.unam.mx'> Faculty of Engineering, UNAM, Mexico City</a>") 
+myMap
+```
+
